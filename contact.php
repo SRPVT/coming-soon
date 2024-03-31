@@ -22,11 +22,11 @@
 			
 			<br><h2>Contact Information</h2>
 			<p>E-Mail: <a href="mailto:syedyaseeralirayan@gmail.com">syedyaseeralirayan@gmail.com</a></p>
-			<p>Internet address: <a href="https://www.rayxstudioz.in" target="_blank">GAMING WEBSITE</a></p>
+			<p> <a href="https://www.rayxstudioz.in" target="_blank">GAMING WEBSITE</a></p>
 		</div>
 	</body>
 	<footer>
-		<a href="impressum.html" target="_blank">COPYRIGHT</a>
+		<a href="impre" target="_blank">COPYRIGHT</a>
 		<p>© RAYXSTUDIOZ <script type="text/javascript">document.write(new Date().getFullYear());</script> - ALL RIGHTS RESERVED.</p>
 	</footer>
 </html>
