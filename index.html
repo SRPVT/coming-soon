@@ -1,47 +1,73 @@
+<!DOCTYPE html>
 <html style="overflow: hidden;">
-    <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>RXHG</title>
-		<meta name="description" content="Welcome to BetaLabs.io!">
-		<meta name="author" content="Hey@BetaLabs.io">
-		<meta property="og:title" content="HQ | BetaLabs.io" />
-		<meta property="og:url" content="https://www.BetaLabs.io/" />
-		<meta property="og:description" content="Welcome to BetaLabs.io!">
-		<meta property="og:image" content="https://www.BetaLabs.io/preview.png" />
-		<meta name="theme-color" content="#000000">
-		<meta name="msapplication-navbutton-color" content="#000000">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/matrix.css">
-		<link rel="stylesheet" href="css/typewriter.css">
-    </head>
-    <body>
-		<canvas id="c"></canvas>
-		<div id="typewriter">
-			<h1>
-				<noscript>WORK IN PROGRESS!</noscript>
-				<span class="txt-rotate" data-period="2000" data-rotate='[
-					"WORK IN PROGRESS",
-					"STAY TUNED",
-					"COMING SOON",
-					"UNDER CONSTRUCTION"
-				]'></span>
-			</h1>
-			<h2>FOLLOW ME ON INSTAGRAM <a href="https://www.instagram.com/bmr.tt1" target="_blank">@BMR.TT1</a></h2>
-			<noscript><h3>Turn on javascript to unleash the full beauty of this site ;)</h3></noscript>
-		</div>
-    </body>
-	<footer style="position: absolute;">
-		<a href="source.html" target="_blank">OTHER INFO-CONTACT</a>
-		<p>© RAYXSTUDIOZ <script type="text/javascript">document.write(new Date().getFullYear());</script> - ALL RIGHTS RESERVED.</p>
-		<script language="javascript" type="text/javascript" src="js/matrix.js"></script>
-		<script language="javascript" type="text/javascript" src="js/resize.js"></script>
-		<script language="javascript" type="text/javascript" src="js/typewriter.js"></script>
-	</footer>
-</html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RXHG</title>
+    <meta name="description" content="Welcome to BetaLabs.io!">
+    <meta name="author" content="Hey@BetaLabs.io">
+    <meta property="og:title" content="HQ | BetaLabs.io" />
+    <meta property="og:url" content="https://www.BetaLabs.io/" />
+    <meta property="og:description" content="Welcome to BetaLabs.io!">
+    <meta property="og:image" content="https://www.BetaLabs.io/preview.png" />
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/matrix.css">
+    <link rel="stylesheet" href="css/typewriter.css">
+</head>
+<body>
+    <canvas id="c"></canvas>
+    <div id="typewriter">
+        <h1>
+            <noscript>WORK IN PROGRESS!</noscript>
+            <span class="txt-rotate" data-period="2000" data-rotate='[
+                "WORK IN PROGRESS",
+                "STAY TUNED",
+                "COMING SOON",
+                "UNDER CONSTRUCTION"
+            ]'></span>
+        </h1>
+        <h2>FOLLOW ME ON INSTAGRAM <a href="https://www.instagram.com/bmr.tt1" target="_blank">@BMR.TT1</a></h2>
+        <noscript><h3>Turn on javascript to unleash the full beauty of this site ;)</h3></noscript>
+        <div id="countdown"></div> <!-- Added a div to display countdown -->
+    </div>
+    <footer style="position: absolute;">
+        <a href="source.html" target="_blank">OTHER INFO-CONTACT</a>
+        <p>© RAYXSTUDIOZ <script type="text/javascript">document.write(new Date().getFullYear());</script> - ALL RIGHTS RESERVED.</p>
+        <script language="javascript" type="text/javascript" src="js/matrix.js"></script>
+        <script language="javascript" type="text/javascript" src="js/resize.js"></script>
+        <script language="javascript" type="text/javascript" src="js/typewriter.js"></script>
+    </footer>
+</body>
+
+<script>
+    // Countdown timer
+    var countDownDate = new Date("April 5, 2024 21:30:00").getTime();
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown timer in the specified div
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-6d92b204-b08f-487e-9a12-8ffd84309d1a" data-elfsight-app-lazy></div>
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rayxstudiozgames" data-description="Support me on Buy me a coffee!" data-message="BUY ME A COFEE" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+<script data-name="BMC-Widget" data-cfasync="false"></script>
+</html>
