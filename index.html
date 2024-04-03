@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/matrix.css">
     <link rel="stylesheet" href="css/typewriter.css">
+    <style>
+        #countdown {
+            font-size: 36px; /* Increased font size */
+            text-align: center; /* Align to center */
+            margin-top: 20px; /* Add margin for spacing */
+        }
+    </style>
 </head>
 <body>
     <canvas id="c"></canvas>
@@ -42,32 +49,32 @@
         <script language="javascript" type="text/javascript" src="js/resize.js"></script>
         <script language="javascript" type="text/javascript" src="js/typewriter.js"></script>
     </footer>
+
+    <script>
+        // Countdown timer
+        var countDownDate = new Date("April 5, 2024 21:30:00").getTime();
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown timer in the specified div
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-6d92b204-b08f-487e-9a12-8ffd84309d1a" data-elfsight-app-lazy></div>
+    <script data-name="BMC-Widget" data-cfasync="false"></script>
 </body>
-
-<script>
-    // Countdown timer
-    var countDownDate = new Date("April 5, 2024 21:30:00").getTime();
-
-    var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the countdown timer in the specified div
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-    }, 1000);
-</script>
-
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-6d92b204-b08f-487e-9a12-8ffd84309d1a" data-elfsight-app-lazy></div>
-<script data-name="BMC-Widget" data-cfasync="false"></script>
 </html>
