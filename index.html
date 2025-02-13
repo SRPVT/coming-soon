@@ -32,9 +32,9 @@
         <h1>
             <noscript>WORK IN PROGRESS!</noscript>
             <span class="txt-rotate" data-period="2000" data-rotate='[
-                "WORK IN PROGRESS",
-                "STAY TUNED",
-                "COMING SOON",
+                "UNDER MAINTANANCE",
+                "UNDER MAINTANANCE",
+                "UNDER MAINTANANCE",
                 "UNDER MAINTANANCE"
             ]'></span>
         </h1>
@@ -50,8 +50,12 @@
     </footer>
 
     <script>
-        // Countdown timer
-        var countDownDate = new Date("Jun 03, 2024 12:30:00").getTime();
+        // Set the countdown for tomorrow at 12:00 PM
+        var now = new Date();
+        now.setDate(now.getDate() + 1); // Set the date to tomorrow
+        now.setHours(12, 0, 0, 0); // Set time to 12:00 PM
+
+        var countDownDate = now.getTime(); // Get the new countdown date
 
         var x = setInterval(function() {
             var now = new Date().getTime();
@@ -72,8 +76,5 @@
         }, 1000);
     </script>
 
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-6d92b204-b08f-487e-9a12-8ffd84309d1a" data-elfsight-app-lazy></div>
-    <script data-name="BMC-Widget" data-cfasync="false"></script>
 </body>
 </html>
